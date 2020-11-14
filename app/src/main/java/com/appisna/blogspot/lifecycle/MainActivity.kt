@@ -1,8 +1,10 @@
 package com.appisna.blogspot.lifecycle
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +17,12 @@ class MainActivity : BaseActivity() {
 
     }
     override fun setupEvents() {
+
+        moveBtn.setOnClickListener {
+            //intent를 통해 실행될 때마다 onCreate가 항상 다시 실행됨.
+            var myIntent = Intent(mContext, OtherActivity::class.java)
+            startActivity(myIntent)
+        }
 
     }
 
