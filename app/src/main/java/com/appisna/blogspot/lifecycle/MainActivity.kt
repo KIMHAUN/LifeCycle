@@ -30,6 +30,8 @@ class MainActivity : BaseActivity() {
     override fun onPause() {
         super.onPause()
 
+        Log.d("메인 화면", "onPause 실행")
+
     }
     override fun setupEvents() {
 
